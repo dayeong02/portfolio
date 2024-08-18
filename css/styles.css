@@ -1,0 +1,427 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    padding: 36px 90px;
+    transition: background-color 0.3s ease;
+    color: rgba(0, 0, 0, 0.85);
+}
+
+/* header */
+header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 400px;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+.language-selector {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+}
+
+.language-selector a:hover {
+    color: rgba(0, 0, 0, 0.70);
+}
+
+.dark-mode a:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.language-selector a.active {
+    color: rgba(0, 0, 0, 0.70);
+}
+
+.dark-mode a.active {
+    color: rgba(255, 255, 255, 1);
+}
+
+.lang-divider {
+    width: 1px;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.30);
+}
+
+.dark-mode .lang-divider {
+    background-color: rgba(255, 255, 255, 0.30);
+}
+
+a {
+    color: rgba(0, 0, 0, 0.40);
+    font-family: "Courier Prime";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.dark-mode a {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.title-h1 {
+    display: flex;
+}
+
+h1 {
+    font-family: Montserrat;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.typing-effect::after {
+    content: '';
+    display: inline-block;
+    width: 1.5px;
+   /* Adjust thickness as needed */
+    height: 35px;
+   /* Adjust height as needed */
+    background-color: black;
+   /* Color of the cursor */
+    animation: blink 1s step-end infinite;
+    margin-left: 10px;
+}
+
+.dark-mode .typing-effect::after {
+    background-color: white;
+   /* Color of the cursor */
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+   }
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 35px;
+}
+
+nav {
+    display: flex;
+    align-items: flex-start;
+    gap: 45px;
+}
+
+nav a {
+    color: rgba(0, 0, 0, 0.40);
+    font-family: "Courier Prime";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+}
+
+nav a:hover {
+    color: rgba(0, 0, 0, 0.70);
+}
+
+/* contents */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card-container a {
+    color: rgba(0, 0, 0, 0.70);
+}
+
+.dark-mode .card-container a {
+    color: rgba(255, 255, 255, 0.80);
+}
+
+.card-wrap {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card {
+    border: 1px solid #333;
+    padding: 14px;
+    transition: opacity 0.2s ease;
+}
+
+.dark-mode .card {
+    border: 1px solid rgba(255, 255, 255, 0.80);
+}
+
+.card:hover {
+    opacity: 0.3;
+}
+
+.card-title {
+    margin-bottom: 16px;
+}
+
+.card-container-bar {
+    width: auto;
+    height: 1px;
+    background-color: #333;
+}
+
+.dark-mode .card-container-bar {
+    background: rgba(255, 255, 255, 0.80);
+}
+
+.card p {
+    color: rgba(0, 0, 0, 0.60);
+    font-family: Montserrat;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.dark-mode .card p {
+    color: rgba(255, 255, 255, 0.60);
+}
+
+.card-tag {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.card-img-container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #eee;
+    margin-top: 100px;
+}
+
+h2 {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+/* footer */
+footer {
+    margin-top: 150px;
+    text-align: center;
+    width: 100%;
+}
+
+footer p {
+    color: rgba(0, 0, 0, 0.85);
+    font-family: "Courier Prime";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.dark-mode footer p {
+    color: rgba(255, 255, 255, 0.80);
+}
+
+/* dark mode and light mode */
+.light-mode {
+    background-color: #f0f0f0;
+    color: #333;
+   /* 폰트 색상을 검정색으로 설정 */
+}
+
+.dark-mode {
+    background-color: #171717;
+    color: #e6e6e6;
+   /* 폰트 색상을 흰색으로 설정 */
+}
+
+.mode-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 60px;
+    display: flex;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.10);
+    box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
+}
+
+button {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background: white;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0px 1px 34px 0px rgba(151, 151, 151, 0.25);
+}
+
+button img {
+    width: 22px;
+    height: 22px;
+    transition: transform 0.3s ease;
+}
+
+button img.flipped {
+    transform: scaleX(-1);
+}
+
+/* sub page*/
+
+header {
+    height: auto;
+    margin-bottom: 220px;
+}
+
+.sub-contents {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 62px;
+    align-self: stretch;
+}
+
+.sub-contents-text {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjusts the space between title and description */
+    margin: 0px 80px;
+}
+
+.sub-text-title {
+    flex: 0.4;
+}
+
+.sub-text-p {
+    flex: 1; /* Both elements take equal space when side-by-side */
+}
+
+.sub-text-title {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.sub-text-p {
+    flex: 1 0 0;
+    color: rgba(0, 0, 0, 0.85);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 250%;
+}
+
+.sub-contents img {
+    align-self: stretch;
+    height: auto;
+}
+
+.dark-mode .sub-text-title {
+    color: rgba(255, 255, 255, 0.90);
+}
+
+.dark-mode .sub-text-p {
+    color: rgba(255, 255, 255, 0.80);
+}
+
+@media (min-width: 1300px) {
+    body {
+        max-width: 1300px;
+        margin: 0 auto;
+   }
+}
+
+@media (max-width: 1216px) {
+    body {
+        padding: 28px 40px;
+   }
+    .mode-toggle {
+        right: 40px;
+   }
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+   }
+
+   /* sub page */
+   .sub-contents-text {
+        margin: 0px 80px;
+    }   
+
+   .sub-text-title {
+        flex: 0.3;
+   }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 18px 20px;
+   }
+    .mode-toggle {
+        right: 20px;
+   }
+    .card-container {
+        grid-template-columns: 1fr;
+   }
+   a, nav a {
+        font-size: 13px;
+   }
+   .language-selector {
+        gap: 20px;
+   }
+   nav {
+        gap: 25px;
+   }
+   .card img {
+        margin-top: 90px;
+   }
+   .card-title {
+        margin-bottom: 12px;
+   }
+   .card p {
+        font-size: 12px;
+   }
+
+   /* sub page */
+    .sub-contents-text {
+        flex-direction: column;
+        margin: 0px 50px;
+    }   
+
+    .sub-text-title, .sub-text-p {
+        flex: none;
+    }
+
+    .sub-text-title {
+        font-size: 24px;
+    }
+
+}
