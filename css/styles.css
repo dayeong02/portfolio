@@ -413,7 +413,7 @@ header {
    /* sub page */
     .sub-contents-text {
         flex-direction: column;
-        margin: 0px 50px;
+        margin: 0px;
     }   
 
     .sub-text-title, .sub-text-p {
