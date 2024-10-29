@@ -353,6 +353,21 @@ header {
     color: rgba(255, 255, 255, 0.80);
 }
 
+.gif-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.gif-img {
+    width: 400px;
+    height: auto;
+    
+}
+
+
+
 @media (min-width: 1300px) {
     body {
         max-width: 1300px;

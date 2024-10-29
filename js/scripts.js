@@ -49,3 +49,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+setInterval(() => {
+    const gif = document.getElementById('gifImage');
+    gif.src = 'img/brand-v1.gif?reload=' + new Date().getTime();
+  }, 3000);
